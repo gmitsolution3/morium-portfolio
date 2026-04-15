@@ -1,4 +1,4 @@
-export function Dribbble({
+export function Dribble({
   className = "",
   size = 20,
   color = "currentColor",

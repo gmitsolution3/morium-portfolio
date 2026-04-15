@@ -3,8 +3,26 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Behance, Dribbble, LinkedIn } from "./icons";
+import { Behance, Dribble, LinkedIn } from "./icons";
 import { Button } from "./ui/button";
+
+const socialLinks = [
+  {
+    name: "linkedin",
+    url: "#",
+    icon: LinkedIn,
+  },
+  {
+    name: "dribble",
+    url: "#",
+    icon: Dribble,
+  },
+  {
+    name: "behance",
+    url: "#",
+    icon: Behance,
+  },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,7 +69,7 @@ export default function Header() {
               href="/"
               className="text-xl md:text-2xl font-bold tracking-tight   transition-colors"
             >
-              John Doe
+              Morium Akter
             </Link>
           </div>
 
@@ -70,24 +88,21 @@ export default function Header() {
 
           {/* Right side icons: 🔗, Bê, ♥ (desktop) */}
           <div className="hidden md:flex items-center space-x-5 lg:space-x-6">
-            <button
-              className="transition-colors text-xl"
-              aria-label="Links"
-            >
-              <LinkedIn />
-            </button>
-            <button
-              className="transition-colors font-medium text-lg"
-              aria-label="Bê"
-            >
-              <Behance />
-            </button>
-            <button
-              className="font-medium text-lg"
-              aria-label="Favorite"
-            >
-              <Dribbble />
-            </button>
+            {socialLinks.map((link) => {
+              const Icon = link.icon;
+
+              return (
+                <Link
+                  href={link.url}
+                  key={link.name}
+                  className="transition-colors text-xl font-medium"
+                  aria-label={`${link.name}-icon`}
+                  target="_blank"
+                >
+                  <Icon />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile menu button */}
@@ -117,22 +132,28 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-700 hover:text-gray-900 font-medium py-2 px-2 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="font-medium py-2 px-2 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
               {/* Mobile icons row */}
               <div className="flex items-center space-x-6 pt-3 mt-2 border-t border-gray-100">
-                <button className="text-gray-600 hover:text-gray-900 text-xl">
-                  🔗
-                </button>
-                <button className="text-gray-600 hover:text-gray-900 font-medium text-lg">
-                  Bê
-                </button>
-                <button className="text-gray-600 hover:text-red-500 text-xl">
-                  ♥
-                </button>
+                {socialLinks.map((link) => {
+                  const Icon = link.icon;
+
+                  return (
+                    <Link
+                      href={link.url}
+                      key={link.name}
+                      className="transition-colors text-xl font-medium"
+                      aria-label={`${link.name}-icon`}
+                      target="_blank"
+                    >
+                      <Icon />
+                    </Link>
+                  );
+                })}
               </div>
             </nav>
           </div>
