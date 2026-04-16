@@ -15,6 +15,7 @@ import {
   Video,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import PrimaryButton from "./ui/primary-button";
 
@@ -278,10 +279,12 @@ export default function Services() {
                 </div>
 
                 {/* CTA Button */}
-                <PrimaryButton varient="outline">
-                  <Heart className="h-4 w-4" />
-                  Get This Service
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <PrimaryButton varient="outline" asChild>
+                  <Link href="/#contact">
+                    <Heart className="h-4 w-4" />
+                    Get This Service
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </PrimaryButton>
               </div>
 

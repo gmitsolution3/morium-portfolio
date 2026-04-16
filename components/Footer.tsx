@@ -4,9 +4,7 @@ import {
   Behance,
   Dribble,
   Fiverr,
-  Instagram,
   LinkedIn,
-  Twitter,
 } from "@/components/icons";
 import {
   ArrowUp,
@@ -19,12 +17,13 @@ import {
 import Link from "next/link";
 
 const quickLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Experience", href: "/experience" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/#header" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Portfolio", href: "/#portfolio" },
+  { name: "Work", href: "/#work" },
+  { name: "Services", href: "/#services" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const serviceLinks = [
@@ -39,38 +38,26 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: LinkedIn,
-    href: "https://linkedin.com/in/moriumakter",
+    href: "https://www.linkedin.com/in/morium-akter-jannatul-043ab8253",
     color: "hover:text-[#0A66C2]",
   },
   {
     name: "Behance",
     icon: Behance,
-    href: "https://behance.net/moriumakter",
+    href: "https://www.behance.net/morium_akter1",
     color: "hover:text-[#1769FF]",
   },
   {
     name: "Dribbble",
     icon: Dribble,
-    href: "https://dribbble.com/moriumakter",
+    href: "https://dribbble.com/morium_akter1",
     color: "hover:text-[#EA4C89]",
   },
   {
     name: "Fiverr",
     icon: Fiverr,
-    href: "https://fiverr.com/moriumakter",
+    href: "https://www.fiverr.com/morium_akter1",
     color: "hover:text-green-500",
-  },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    href: "https://instagram.com/moriumakter",
-    color: "hover:text-pink-500",
-  },
-  {
-    name: "Twitter",
-    icon: Twitter,
-    href: "https://twitter.com/moriumakter",
-    color: "hover:text-sky-500",
   },
 ];
 
@@ -87,41 +74,41 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className="text-2xl font-bold text-primary">
                 Morium Akter
               </h2>
-              <p className="text-sm text-gray-400 mt-1">Jannatul</p>
+              <p className="text-sm text-primary mt-1">Jannatul</p>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Graphic Designer & Marketing Specialist helping brands
               grow with impactful visuals.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
-              <Heart className="h-4 w-4 text-rose-400" />
+              <Heart className="h-4 w-4 ttext-primary" />
               <span>Available for freelance work</span>
             </div>
             {/* Contact info compact */}
             <div className="space-y-2 pt-2">
               <div className="flex items-center gap-2 text-sm">
-                <Mail className="h-3.5 w-3.5 text-indigo-400" />
+                <Mail className="h-3.5 w-3.5 text-primary" />
                 <a
-                  href="mailto:morium@graphicsmm.com"
+                  href="mailto:moriumakter575@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  morium@graphicsmm.com
+                  moriumakter575@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <Phone className="h-3.5 w-3.5 text-indigo-400" />
+                <Phone className="h-3.5 w-3.5 text-primary" />
                 <a
-                  href="tel:+8801234567890"
+                  href="tel:+8801706959364"
                   className="hover:text-white transition-colors"
                 >
-                  +880 1234 567890
+                  +880 1706 959364
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <MapPin className="h-3.5 w-3.5 text-indigo-400" />
+                <MapPin className="h-3.5 w-3.5 text-primary" />
                 <span>Dhaka, Bangladesh (Remote)</span>
               </div>
             </div>
@@ -157,15 +144,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-indigo-400 transition-colors duration-200 text-sm flex items-center gap-1 group"
-                  >
+                  <p className="text-gray-400 hover:text-indigo-400 transition-colors duration-200 text-sm flex items-center gap-1 group">
                     <span className="opacity-0 group-hover:opacity-100 transition-opacity">
                       →
                     </span>
                     {link.name}
-                  </Link>
+                  </p>
                 </li>
               ))}
             </ul>

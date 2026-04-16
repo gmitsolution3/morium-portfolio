@@ -23,7 +23,7 @@ const socialLinks = [
   {
     name: "Fiverr",
     icon: Fiverr,
-    href: "https://fiverr.com/moriumakter",
+    href: "https://www.fiverr.com/morium_akter1",
     color: "from-green-500 to-emerald-600",
     bgColor: "bg-green-50",
     hoverColor: "hover:text-green-600",
@@ -32,7 +32,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: LinkedIn,
-    href: "https://linkedin.com/in/moriumakter",
+    href: "https://www.linkedin.com/in/morium-akter-jannatul-043ab8253",
     color: "from-blue-500 to-indigo-600",
     bgColor: "bg-blue-50",
     hoverColor: "hover:text-blue-600",
@@ -41,7 +41,7 @@ const socialLinks = [
   {
     name: "Behance",
     icon: Behance,
-    href: "https://behance.net/moriumakter",
+    href: "https://www.behance.net/morium_akter1",
     color: "from-blue-600 to-indigo-700",
     bgColor: "bg-blue-50",
     hoverColor: "hover:text-blue-700",
@@ -50,7 +50,7 @@ const socialLinks = [
   {
     name: "Dribbble",
     icon: Dribble,
-    href: "https://dribbble.com/moriumakter",
+    href: "https://dribbble.com/morium_akter1",
     color: "from-pink-500 to-rose-600",
     bgColor: "bg-pink-50",
     hoverColor: "hover:text-pink-600",
@@ -91,8 +91,8 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+880 1234 567890",
-      href: "tel:+8801234567890",
+      value: "+8801706959364",
+      href: "tel:+8801706959364",
       color: "from-emerald-500 to-teal-600",
       bgColor: "bg-emerald-50",
       textColor: "text-emerald-600",
@@ -100,8 +100,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      value: "morium@graphicsmm.com",
-      href: "mailto:morium@graphicsmm.com",
+      value: "moriumakter575@gmail.com",
+      href: "mailto:moriumakter575@gmail.com",
       color: "from-blue-500 to-indigo-600",
       bgColor: "bg-blue-50",
       textColor: "text-blue-600",
@@ -109,7 +109,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Location",
-      value: "Dhaka, Bangladesh (Remote)",
+      value: "Dhaka, Bangladesh",
       href: "#",
       color: "from-purple-500 to-pink-600",
       bgColor: "bg-purple-50",

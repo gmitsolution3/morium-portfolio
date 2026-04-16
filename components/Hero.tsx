@@ -117,14 +117,14 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <PrimaryButton asChild>
-              <Link href="/portfolio">
+              <Link href="/#portfolio">
                 View Portfolio
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </PrimaryButton>
 
             <PrimaryButton asChild varient="outline">
-              <Link href="/contact">Hire Me</Link>
+              <Link href="/#contact">Hire Me</Link>
             </PrimaryButton>
           </div>
 
