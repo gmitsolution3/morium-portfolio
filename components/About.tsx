@@ -65,8 +65,8 @@ export default function About() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-indigo-50 rounded-full px-4 py-1.5 mb-4">
-            <span className="text-sm font-medium text-indigo-700">
+          <div className="inline-flex items-center gap-2 bg-primary border border-secondary rounded-full px-4 py-1.5 mb-4">
+            <span className="text-sm font-medium text-foreground">
               About Me
             </span>
           </div>
@@ -172,7 +172,7 @@ export default function About() {
                   <h4 className="font-semibold text-gray-900 mb-2">
                     My Journey
                   </h4>
-                  <p className="text-gray-600 text-sm leading-relaxed space-y-4">
+                  <div className="text-gray-600 text-sm leading-relaxed space-y-4">
                     <p>
                       My journey started with a deep interest in
                       creativity and visual storytelling, which led me
@@ -207,7 +207,7 @@ export default function About() {
                       thinking to help brands communicate better,
                       connect with their audience, and grow faster.
                     </p>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -205,8 +205,8 @@ export default function Portfolio() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 bg-indigo-50 rounded-full px-4 py-1.5 mb-4">
-            <span className="text-sm font-medium ">
+          <div className="inline-flex items-center gap-2 bg-primary border border-secondary rounded-full px-4 py-1.5 mb-4">
+            <span className="text-sm font-medium text-foreground">
               My Creative Work
             </span>
           </div>
@@ -232,14 +232,14 @@ export default function Portfolio() {
                   transition-all duration-300 text-sm font-medium
                   ${
                     isActive
-                      ? "bg-foreground text-white shadow-lg shadow-indigo-200 scale-105"
-                      : "bg-white/20 text-gray-900 hover:bg-gray-100 border border-gray-200"
+                      ? "bg-primary text-foreground shadow-lg scale-105 border border-secondary"
+                      : " text-gray-900  border border-secondary"
                   }
                 `}
               >
                 <span>{category.name}</span>
                 {isActive && (
-                  <span className="ml-1 bg-white/20 rounded-full px-1.5 py-0.5 text-xs">
+                  <span className="ml-1 bg-background rounded-full px-1.5 py-0.5 text-xs border border-secondary">
                     {filteredProjects.length}
                   </span>
                 )}
