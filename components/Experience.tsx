@@ -121,7 +121,7 @@ export default function Experience() {
               {/* Left/Right alternating content */}
               <div
                 className={`
-                w-full md:w-[calc(50%-2rem)] ml-12 md:ml-0
+                w-full md:w-[calc(50%-2rem)]
                 ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"}
               `}
               >
@@ -210,9 +210,6 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-
-              {/* Mobile timeline dot */}
-              <div className="absolute left-0 top-6 w-3 h-3 rounded-full bg-indigo-500 border-2 border-white shadow-md md:hidden" />
             </div>
           ))}
         </div>

@@ -142,7 +142,7 @@ export default function About() {
             </div>
 
             {/* Key Highlights Grid */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
               {highlights.map((item, idx) => (
                 <div
                   key={idx}
