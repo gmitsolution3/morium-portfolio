@@ -79,12 +79,12 @@ export default function Hero() {
           </div>
 
           {/* Badge / Small intro tag */}
-          <div className="inline-flex items-center gap-2 bg-indigo-50/80 backdrop-blur-sm border border-indigo-100 rounded-full px-4 py-1.5 mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary  backdrop-blur-sm border border-secondary rounded-full px-4 py-1.5 mb-6">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-900/90 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-900"></span>
             </span>
-            <span className="text-sm font-medium text-indigo-700">
+            <span className="text-sm font-medium text-gray-900">
               Available for work
             </span>
           </div>
@@ -135,14 +135,14 @@ export default function Hero() {
                 key={idx}
                 className="flex items-center gap-3 group"
               >
-                <div className="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center group-hover:bg-indigo-100 transition-colors duration-300">
-                  <stat.icon className="h-5 w-5 text-indigo-600" />
+                <div className="w-10 h-10 rounded-full bg-primary border border-secondary flex items-center justify-center group-hover:bg-indigo-100 transition-colors duration-300">
+                  <stat.icon className="h-5 w-5 text-gray-900" />
                 </div>
                 <div>
                   <div className="text-xl font-bold text-gray-900">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-500">
+                  <div className="text-sm ">
                     {stat.label}
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function Hero() {
           </div>
 
           {/* Scroll indicator - subtle */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+          {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
             <div className="flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
               <span className="text-xs text-gray-400 font-medium">
                 Scroll
@@ -160,7 +160,7 @@ export default function Hero() {
                 <div className="w-1 h-2 bg-gray-400 rounded-full mt-1 animate-bounce" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

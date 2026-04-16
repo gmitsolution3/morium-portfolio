@@ -30,6 +30,8 @@ export default function Header() {
 
   // Handle scroll effect for sticky header
   useEffect(() => {
+    setScrolled(window.scrollY > 10);
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
@@ -37,7 +39,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when window resizes to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -49,16 +50,21 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Work", href: "/work" },
+    { name: "Home", href: "/#header" },
+    { name: "About", href: "/#about" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Work", href: "/#work" },
+    { name: "Services", href: "/#services" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
     <header
+      id="header"
       className={`
         sticky top-0 z-50 w-full transition-all duration-300
-        ${scrolled ? "backdrop-blur-md shadow-sm" : ""}
+        ${scrolled ? "backdrop-blur-md shadow-md" : ""}
       `}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

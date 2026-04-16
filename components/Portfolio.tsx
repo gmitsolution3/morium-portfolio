@@ -201,7 +201,7 @@ export default function Portfolio() {
         );
 
   return (
-    <section className="py-20 md:py-28">
+    <section id="portfolio" className="py-20 md:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
