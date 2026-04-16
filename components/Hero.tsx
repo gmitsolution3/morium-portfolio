@@ -29,19 +29,19 @@ export default function Hero() {
 
   const socialLinks = [
     {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/morium-akter-jannatul-043ab8253",
       icon: LinkedIn,
-      href: "https://linkedin.com/in/moriumakter",
-      label: "LinkedIn",
     },
     {
-      icon: Behance,
-      href: "https://behance.net/moriumakter",
-      label: "Behance",
-    },
-    {
+      name: "dribble",
+      url: "https://dribbble.com/morium_akter1",
       icon: Dribble,
-      href: "https://dribbble.com/moriumakter",
-      label: "Dribbble",
+    },
+    {
+      name: "behance",
+      url: "https://www.behance.net/morium_akter1",
+      icon: Behance,
     },
   ];
 
@@ -61,19 +61,19 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative z-10">
         <div>
           {/* Social links - top right aligned aesthetic */}
-          <div className="flex justify-end mb-8">
-            <div className="flex items-center gap-4 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-100">
+          <div className="flex justify-start lg:justify-end mb-8">
+            <div className="flex items-center gap-4 bg-primary backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-secondary">
               {socialLinks.map((social, idx) => (
-                <a
+                <Link
                   key={idx}
-                  href={social.href}
+                  href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-indigo-600 transition-all duration-300 hover:scale-110"
-                  aria-label={social.label}
+                  className="text-gray-900 hover:text-indigo-600 transition-all duration-300 hover:scale-110"
+                  aria-label={social.url}
                 >
                   <social.icon size={18} />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -142,9 +142,7 @@ export default function Hero() {
                   <div className="text-xl font-bold text-gray-900">
                     {stat.value}
                   </div>
-                  <div className="text-sm ">
-                    {stat.label}
-                  </div>
+                  <div className="text-sm ">{stat.label}</div>
                 </div>
               </div>
             ))}

@@ -14,69 +14,70 @@ const experiences = [
   {
     id: 1,
     company: "Graphics Multimedia",
-    role: "Co-founder & Creative Director",
-    period: "2023 - Present",
-    duration: "2+ years",
-    location: "Remote / Global",
+    role: "Co-founder & Graphic Designer & Marketing Specialist",
+    period: "2022 - Present",
+    duration: "1+ years",
+    location: "Bangladesh",
     icon: Briefcase,
     gradient: "from-indigo-500 to-purple-600",
     bgGradient: "from-indigo-50 to-purple-50",
     borderColor: "border-indigo-200",
     achievements: [
-      "Co-founded and scaled design agency serving 50+ clients across 12 countries",
-      "Grew team from 2 to 20+ designers and marketers in 18 months",
-      "Increased client retention rate to 92% through quality delivery and strategic support",
+      "Co-founded Graphics Multimedia and led end-to-end design and marketing operations",
+      "Managed and coordinated a team of 20+ designers and marketers",
+      "Worked with 30+ clients globally delivering graphics, video, and marketing solutions",
+      "Successfully sold 20+ digital marketing packages in the local market",
     ],
   },
   {
     id: 2,
-    company: "Fiverr",
-    role: "Freelance Graphic Designer & Marketer",
+    company: "Fiverr & Independent Clients",
+    role: "Freelance Graphic Designer",
     period: "2022 - Present",
-    duration: "2+ years",
-    location: "Freelance Platform",
+    duration: "1+ years",
+    location: "Remote",
     icon: Award,
     gradient: "from-emerald-500 to-teal-600",
     bgGradient: "from-emerald-50 to-teal-50",
     borderColor: "border-emerald-200",
     achievements: [
-      "Completed 150+ design projects with 5-star rating and 98% client satisfaction",
-      "Ranked as Top Rated Seller in Branding & Logo Design category",
-      "Generated $85K+ revenue through repeat clients and premium packages",
+      "Completed 30+ design projects for clients across multiple industries",
+      "Designed logos, branding materials, and marketing creatives",
+      "Created social media posts, banners, and promotional visuals",
     ],
   },
   {
     id: 3,
     company: "Brand of Blue",
-    role: "Senior Graphic Designer",
-    period: "2021 - 2023",
-    duration: "2 years",
-    location: "Hybrid",
+    role: "Graphic Designer",
+    period: "2023 - 2024",
+    duration: "1 year",
+    location: "Bangladesh",
     icon: Globe,
     gradient: "from-cyan-500 to-blue-600",
     bgGradient: "from-cyan-50 to-blue-50",
     borderColor: "border-cyan-200",
     achievements: [
-      "Led rebranding campaign that increased brand recognition by 67% across social platforms",
-      "Designed 200+ marketing creatives that generated $500K+ in attributed sales",
-      "Mentored 5 junior designers, improving team output efficiency by 40%",
+      "Designed marketing creatives for social media campaigns",
+      "Collaborated with marketing teams to improve brand engagement",
+      "Supported campaign visuals aligned with brand strategy",
     ],
   },
   {
     id: 4,
     company: "Digitech UK",
-    role: "Marketing Design Specialist",
-    period: "2020 - 2021",
+    role: "Social Media Manager",
+    period: "2022 - 2023",
     duration: "1 year",
-    location: "Remote",
+    location: "Bangladesh",
     icon: TrendingUp,
     gradient: "from-rose-500 to-pink-600",
     bgGradient: "from-rose-50 to-pink-50",
     borderColor: "border-rose-200",
     achievements: [
-      "Created video content strategy that grew YouTube subscribers from 2K to 25K in 8 months",
-      "Designed email campaign templates achieving 54% open rate (industry avg: 21%)",
-      "Collaborated with UK/EU clients to deliver localized marketing assets across 6 markets",
+      "Managed social media content, visuals, and brand assets",
+      "Designed creatives to support digital marketing campaigns",
+      "Worked with UI/UX team to maintain consistent visual communication",
     ],
   },
 ];
@@ -103,7 +104,7 @@ export default function Experience() {
         {/* Timeline - Desktop (vertical line) */}
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical timeline line - hidden on mobile */}
-          <div className="absolute left-[1.5rem] md:left-1/2 top-0 bottom-0 w-0.5 bg-foreground hidden md:block" />
+          <div className="absolute left-[1.5rem] md:left-1/2 top-0 bottom-0 w-0.5 bg-secondary hidden md:block" />
 
           {/* Experience items */}
           {experiences.map((exp, index) => (
@@ -115,7 +116,7 @@ export default function Experience() {
               `}
             >
               {/* Timeline node - center dot */}
-              <div className="absolute left-[1.35rem] md:left-1/2 top-6 w-4 h-4 rounded-full bg-white border-4 border-foreground transform -translate-x-1/2 hidden md:block z-10" />
+              <div className="absolute left-[1.35rem] md:left-1/2 top-6 w-4 h-4 rounded-full bg-primary border-4 border-secondary transform -translate-x-1/2 hidden md:block z-10" />
 
               {/* Left/Right alternating content */}
               <div
@@ -127,15 +128,13 @@ export default function Experience() {
                 {/* Card */}
                 <div
                   className={`
-                    group relative bg-white/20 rounded-2xl shadow-sm hover:shadow-xl 
+                    group relative bg-primary border border-secondary rounded-2xl shadow-sm hover:shadow-xl 
                     border border-gray-100 overflow-hidden
                     transition-all duration-300 hover:-translate-y-1
                   `}
                 >
                   {/* Gradient accent bar on top */}
-                  <div
-                    className={`h-1.5 bg-gradient-to-r ${exp.gradient}`}
-                  />
+                  <div className={`h-1.5`} />
 
                   <div className="p-5 md:p-6">
                     {/* Header with icon and period */}
@@ -143,35 +142,33 @@ export default function Experience() {
                       <div className="flex items-center gap-3">
                         <div
                           className={`
-                          p-2.5 rounded-xl bg-gradient-to-br ${exp.bgGradient}
+                          p-3 rounded-xl bg-background border border-secondary
                           transition-all duration-300 group-hover:scale-110
                         `}
                         >
-                          <exp.icon
-                            className={`h-5 w-5 bg-gradient-to-r ${exp.gradient} bg-clip-text text-transparent`}
-                          />
+                          <exp.icon className={`h-5 w-5 `} />
                         </div>
                         <div>
                           <h3 className="text-lg md:text-xl font-bold text-gray-900">
                             {exp.company}
                           </h3>
-                          <p className="text-indigo-600 font-medium text-sm">
+                          <p className="text-foreground font-medium text-xs">
                             {exp.role}
                           </p>
                         </div>
                       </div>
 
                       {/* Duration badge */}
-                      <div className="hidden sm:flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full">
-                        <Clock className="h-3 w-3 text-gray-500" />
-                        <span className="text-xs font-medium text-gray-600">
+                      <div className="hidden sm:flex items-center gap-1.5 bg-background border border-secondary px-2.5 py-1 rounded-full">
+                        <Clock className="h-3 w-3 text-foreground" />
+                        <span className="text-xs font-medium text-gray-700 whitespace-nowrap">
                           {exp.duration}
                         </span>
                       </div>
                     </div>
 
                     {/* Period and location */}
-                    <div className="flex flex-wrap items-center gap-3 mb-4 text-sm text-gray-500">
+                    <div className="flex flex-wrap items-center gap-3 mb-4 text-sm text-gray-700">
                       <div className="flex items-center gap-1">
                         <Clock className="h-3.5 w-3.5" />
                         <span>{exp.period}</span>
@@ -198,7 +195,6 @@ export default function Experience() {
                           <ChevronRight
                             className={`
                             h-4 w-4 mt-0.5 flex-shrink-0
-                            bg-gradient-to-r ${exp.gradient} bg-clip-text text-transparent
                             transition-transform duration-200 group-hover/achievement:translate-x-0.5
                           `}
                           />
@@ -219,44 +215,6 @@ export default function Experience() {
               <div className="absolute left-0 top-6 w-3 h-3 rounded-full bg-indigo-500 border-2 border-white shadow-md md:hidden" />
             </div>
           ))}
-        </div>
-
-        {/* Stats summary */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="text-center p-4 rounded-xl bg-white/10 border border-gray-100 shadow-sm">
-              <div className="text-2xl md:text-3xl font-bold text-indigo-600">
-                4+
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Years Experience
-              </div>
-            </div>
-            <div className="text-center p-4 rounded-xl bg-white/10 border border-gray-100 shadow-sm">
-              <div className="text-2xl md:text-3xl font-bold text-purple-600">
-                50+
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Global Clients
-              </div>
-            </div>
-            <div className="text-center p-4 rounded-xl bg-white/10 border border-gray-100 shadow-sm">
-              <div className="text-2xl md:text-3xl font-bold text-cyan-600">
-                150+
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Projects Completed
-              </div>
-            </div>
-            <div className="text-center p-4 rounded-xl bg-white/10 border border-gray-100 shadow-sm">
-              <div className="text-2xl md:text-3xl font-bold text-rose-600">
-                98%
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Client Satisfaction
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -245,7 +245,7 @@ export default function Contact() {
           </div>
 
           {/* Right column - Contact Form */}
-          <div className="rounded-2xl shadow-xl border border-secondary overflow-hidden">
+          <div className="rounded-2xl shadow-xl border border-secondary/50 overflow-hidden">
             <div className="bg-background px-6 py-4">
               <div className="flex items-center gap-2">
                 <Send className="h-5 w-5 " />

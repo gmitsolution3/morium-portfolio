@@ -7,13 +7,12 @@ import {
   ExternalLink,
   Eye,
   Layers,
-  Megaphone,
   Palette,
   Share2,
   Sparkles,
   TrendingUp,
-  Video,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 // Category configuration
@@ -22,8 +21,6 @@ const categories = [
   { id: "logo", name: "Logo Design", icon: Palette },
   { id: "branding", name: "Branding", icon: Sparkles },
   { id: "social", name: "Social Media Posts", icon: Share2 },
-  { id: "marketing", name: "Marketing Creatives", icon: Megaphone },
-  { id: "video", name: "Video Content", icon: Video },
 ];
 
 // Portfolio projects data
@@ -33,7 +30,7 @@ const projects = [
     id: 1,
     title: "Nexus Tech Logo",
     category: "logo",
-    image: "/portfolio/nexus-logo.jpg", // Replace with actual image path
+    image: "/images/gym-logo.webp",
     description:
       "Designed modern tech logo for Nexus Technologies, increasing brand recognition by 45%",
     result: "45% increase in brand recognition",
@@ -43,7 +40,7 @@ const projects = [
     id: 2,
     title: "Bloom Beauty",
     category: "logo",
-    image: "/portfolio/bloom-logo.jpg",
+    image: "/images/financial-logo.webp",
     description:
       "Created elegant floral-inspired logo for Bloom Beauty, boosting social media engagement by 62%",
     result: "62% boost in engagement",
@@ -53,7 +50,7 @@ const projects = [
     id: 3,
     title: "Urban Eats",
     category: "logo",
-    image: "/portfolio/urbaneats-logo.jpg",
+    image: "/images/consulting-logo.webp",
     description:
       "Designed bold restaurant logo for Urban Eats, increasing foot traffic by 38%",
     result: "38% increase in foot traffic",
@@ -65,7 +62,7 @@ const projects = [
     id: 4,
     title: "EcoLife Brand Identity",
     category: "branding",
-    image: "/portfolio/ecolife-brand.jpg",
+    image: "/images/brand.webp",
     description:
       "Complete branding package for EcoLife, resulting in 78% higher customer trust scores",
     result: "78% higher trust scores",
@@ -75,21 +72,11 @@ const projects = [
     id: 5,
     title: "Fitness First Rebrand",
     category: "branding",
-    image: "/portfolio/fitness-brand.jpg",
+    image: "/images/brand-2.webp",
     description:
       "Rebranded Fitness First gym chain, leading to 53% increase in membership signups",
     result: "53% more signups",
     tags: ["Fitness", "Dynamic", "Rebrand"],
-  },
-  {
-    id: 6,
-    title: "Luxe Hotel Collection",
-    category: "branding",
-    image: "/portfolio/luxe-brand.jpg",
-    description:
-      "Luxury branding for hotel chain, increasing direct bookings by 67%",
-    result: "67% increase in bookings",
-    tags: ["Luxury", "Sophisticated", "Premium"],
   },
 
   // Social Media Posts
@@ -97,7 +84,7 @@ const projects = [
     id: 7,
     title: "Fashion Week Campaign",
     category: "social",
-    image: "/portfolio/fashion-social.jpg",
+    image: "/images/social-media-1.webp",
     description:
       "Designed 20+ social media posts for Fashion Week, generating 125K+ organic reach",
     result: "125K+ organic reach",
@@ -107,7 +94,7 @@ const projects = [
     id: 8,
     title: "Wellness Wednesday Series",
     category: "social",
-    image: "/portfolio/wellness-social.jpg",
+    image: "/images/social-media-1.webp",
     description:
       "Created viral social series for wellness brand, increasing engagement by 156%",
     result: "156% engagement boost",
@@ -117,75 +104,11 @@ const projects = [
     id: 9,
     title: "Tech Product Launch",
     category: "social",
-    image: "/portfolio/tech-social.jpg",
+    image: "/images/social-media-1.webp",
     description:
       "Social media teasers for product launch, driving 45K+ pre-orders",
     result: "45K+ pre-orders",
     tags: ["Product Launch", "Tech", "Teaser"],
-  },
-
-  // Marketing Creatives
-  {
-    id: 10,
-    title: "Black Friday Campaign",
-    category: "marketing",
-    image: "/portfolio/blackfriday-creative.jpg",
-    description:
-      "Designed high-converting ad creatives, achieving 285% ROI on ad spend",
-    result: "285% ROI",
-    tags: ["Sales", "Ads", "High Converting"],
-  },
-  {
-    id: 11,
-    title: "Email Newsletter Design",
-    category: "marketing",
-    image: "/portfolio/email-creative.jpg",
-    description:
-      "Redesigned email templates, boosting open rates by 42% and clicks by 38%",
-    result: "42% open rate increase",
-    tags: ["Email", "Newsletter", "Conversion"],
-  },
-  {
-    id: 12,
-    title: "Billboard Advertising",
-    category: "marketing",
-    image: "/portfolio/billboard-creative.jpg",
-    description:
-      "Outdoor ad campaign for retail brand, increasing store visits by 34%",
-    result: "34% more store visits",
-    tags: ["OOH", "Billboard", "High Impact"],
-  },
-
-  // Video Content
-  {
-    id: 13,
-    title: "Brand Story Video",
-    category: "video",
-    image: "/portfolio/brand-video.jpg",
-    description:
-      "Produced brand storytelling video, generating 2.3M views and 15K+ shares",
-    result: "2.3M views",
-    tags: ["Storytelling", "Emotional", "Viral"],
-  },
-  {
-    id: 14,
-    title: "Product Demo Reel",
-    category: "video",
-    image: "/portfolio/demo-video.jpg",
-    description:
-      "Created product demo video, increasing conversion rate by 89%",
-    result: "89% higher conversion",
-    tags: ["Demo", "Product", "Conversion"],
-  },
-  {
-    id: 15,
-    title: "Social Media Reels",
-    category: "video",
-    image: "/portfolio/reels-video.jpg",
-    description:
-      "Short-form video content for TikTok/IG, gaining 500K+ organic views",
-    result: "500K+ views",
-    tags: ["Reels", "TikTok", "Short Form"],
   },
 ];
 
@@ -267,7 +190,6 @@ export default function Portfolio() {
                   </span>
                 </div>
 
-                {/* Actual image would go here:
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -275,7 +197,6 @@ export default function Portfolio() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                 />
-                */}
 
                 {/* Hover Overlay - reveals description and details */}
                 <div

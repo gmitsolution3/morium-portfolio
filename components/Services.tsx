@@ -16,6 +16,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useState } from "react";
+import PrimaryButton from "./ui/primary-button";
 
 const services = [
   {
@@ -150,9 +151,7 @@ export default function Services() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
             Services That{" "}
-            <span className="text-foreground">
-              Deliver Results
-            </span>
+            <span className="text-foreground">Deliver Results</span>
           </h2>
           <p className="text-gray-600 mt-4 text-lg">
             Strategic design and marketing solutions tailored to grow
@@ -166,7 +165,7 @@ export default function Services() {
             <div
               key={service.id}
               className={`
-                group relative bg-white/10 rounded-2xl overflow-hidden
+                group relative rounded-2xl overflow-hidden
                 transition-all duration-400 hover:shadow-xl hover:-translate-y-1
                 border border-secondary/20
                 shadow-sm
@@ -188,19 +187,19 @@ export default function Services() {
                 {/* Icon with animation */}
                 <div
                   className={`
-                  w-14 h-14 rounded-xl ${service.lightBg}
+                  w-14 h-14 rounded-xl bg-primary border border-secondary/50
                   flex items-center justify-center mb-5
                   transition-all duration-300
                   ${hoveredId === service.id ? "scale-110 shadow-md" : ""}
                 `}
                 >
                   <service.icon
-                    className={`h-7 w-7 ${service.iconColor}`}
+                    className={`h-7 w-7 text-secondary`}
                   />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-foreground mb-3">
                   {service.title}
                 </h3>
 
@@ -234,7 +233,7 @@ export default function Services() {
                           key={idx}
                           className="flex items-start gap-2"
                         >
-                          <CheckCircle className="h-4 w-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                          <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
                           <span className="text-sm text-gray-600">
                             {feature}
                           </span>
@@ -252,7 +251,7 @@ export default function Services() {
                 <div
                   className={`
                   mb-5 p-4 rounded-xl transition-all duration-300
-                  ${service.lightBg} border border-opacity-50
+                  bg-primary border border-secondary/50 border border-opacity-50
                   ${hoveredId === service.id ? "shadow-inner" : ""}
                 `}
                 >
@@ -270,7 +269,7 @@ export default function Services() {
                   <div
                     className={`
                     mt-2 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold
-                    bg-white/60 ${service.iconColor}
+                    bg-background border border-secondary/50 text-secondary
                   `}
                   >
                     <Zap className="h-3 w-3" />
@@ -279,53 +278,19 @@ export default function Services() {
                 </div>
 
                 {/* CTA Button */}
-                <button
-                  className={`
-                  w-full py-2.5 rounded-xl font-semibold text-sm
-                  transition-all duration-300 flex items-center justify-center gap-2
-                  ${
-                    service.popular
-                      ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:shadow-lg hover:scale-[1.02]"
-                      : `bg-gray-100 text-gray-700 hover:bg-gray-200`
-                  }
-                `}
-                >
+                <PrimaryButton varient="outline">
                   <Heart className="h-4 w-4" />
                   Get This Service
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </button>
+                </PrimaryButton>
               </div>
 
               {/* Bottom gradient bar */}
               <div
-                className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+                className={`absolute bottom-0 left-0 right-0 h-1 bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
               />
             </div>
           ))}
-        </div>
-
-        {/* Custom package consultation CTA */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-10 text-center text-white shadow-xl">
-            <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5 mb-4">
-              <Zap className="h-4 w-4" />
-              <span className="text-sm font-medium">
-                Need Something Custom?
-              </span>
-            </div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-3">
-              Let's Build a Tailored Package For You
-            </h3>
-            <p className="text-white/80 mb-6 max-w-lg mx-auto">
-              Not sure which service fits your needs? I'll help you
-              create a custom solution that matches your goals and
-              budget.
-            </p>
-            <button className="bg-white text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 shadow-lg">
-              Book Free Consultation
-              <ArrowRight className="h-4 w-4" />
-            </button>
-          </div>
         </div>
 
         {/* Trust indicator */}

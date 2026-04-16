@@ -1,12 +1,8 @@
-// components/AboutSection.tsx
-// About section with profile image, human-tone bio, and key highlights
-
 "use client";
 
 import PrimaryButton from "@/components/ui/primary-button";
 import {
   ArrowRight,
-  Award,
   Briefcase,
   Globe,
   Layout,
@@ -14,6 +10,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
@@ -87,10 +84,12 @@ export default function About() {
               <div className="relative ">
                 {/* Circular image */}
                 <div className="w-[350px] h-[350px] rounded-full border-2 border-secondary overflow-hidden bg-primary">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/25.jpg"
+                  <Image
+                    src="/morium.jpg"
                     alt="Profile"
                     className="w-full h-full object-cover"
+                    width={350}
+                    height={350}
                   />
                 </div>
 
@@ -147,9 +146,9 @@ export default function About() {
               {highlights.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-white/20 shadow-sm hover:shadow-md transition-shadow duration-200"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-primary border border-secondary shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
-                  <div className={`p-2 rounded-lg ${item.color}`}>
+                  <div className={`p-2 rounded-lg text-foreground bg-background border border-secondary/50`}>
                     <item.icon className="h-5 w-5" />
                   </div>
                   <div>
@@ -213,12 +212,12 @@ export default function About() {
             </div>
 
             {/* CTA */}
-            <PrimaryButton asChild>
+            {/* <PrimaryButton asChild>
               <Link href="/about">
                 More about me
                 <ArrowRight className="h-4 w-4" />
               </Link>
-            </PrimaryButton>
+            </PrimaryButton> */}
           </div>
         </div>
       </div>

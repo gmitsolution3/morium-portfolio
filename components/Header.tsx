@@ -9,17 +9,17 @@ import { Button } from "./ui/button";
 const socialLinks = [
   {
     name: "linkedin",
-    url: "#",
+    url: "https://www.linkedin.com/in/morium-akter-jannatul-043ab8253",
     icon: LinkedIn,
   },
   {
     name: "dribble",
-    url: "#",
+    url: "https://dribbble.com/morium_akter1",
     icon: Dribble,
   },
   {
     name: "behance",
-    url: "#",
+    url: "https://www.behance.net/morium_akter1",
     icon: Behance,
   },
 ];

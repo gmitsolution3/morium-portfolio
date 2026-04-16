@@ -24,8 +24,8 @@ export default function Skills() {
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Skills & Tools
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Skills & <span className="text-foreground">Tools</span>
           </h2>
           <p className="text-gray-600 mt-2">
             What I bring to every project
@@ -34,9 +34,9 @@ export default function Skills() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Skills */}
-          <div className="bg-white/10 rounded-2xl p-6 shadow-sm">
+          <div className="bg-primary border border-secondary rounded-2xl p-6 shadow-sm">
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <span className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center">
+              <span className="w-12 h-12 bg-background border border-secondary/50 rounded-lg flex items-center justify-center">
                 🎯
               </span>
               Skills
@@ -54,7 +54,7 @@ export default function Skills() {
                   </div>
                   <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-foreground rounded-full transition-all duration-1000"
+                      className="h-full bg-secondary rounded-full transition-all duration-1000"
                       style={{ width: `${skill.level}%` }}
                     />
                   </div>
@@ -64,9 +64,9 @@ export default function Skills() {
           </div>
 
           {/* Tools */}
-          <div className="bg-white/10 rounded-2xl p-6 shadow-sm">
+          <div className="bg-primary border border-secondary rounded-2xl p-6 shadow-sm">
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <span className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+              <span className="w-12 h-12 bg-background border border-secondary/50 rounded-lg flex items-center justify-center">
                 🛠️
               </span>
               Tools
@@ -82,7 +82,7 @@ export default function Skills() {
                   </div>
                   <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-foreground rounded-full transition-all duration-1000"
+                      className="h-full bg-secondary rounded-full transition-all duration-1000"
                       style={{ width: `${tool.level}%` }}
                     />
                   </div>
