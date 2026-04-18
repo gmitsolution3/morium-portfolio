@@ -14,10 +14,9 @@ export default function Skills() {
 
   const tools = [
     { name: "Adobe Photoshop", level: 95 },
-    { name: "Illustrator", level: 92 },
-    { name: "InDesign", level: 85 },
+    { name: "Adobe Illustrator", level: 92 },
+    { name: "Adobe InDesign", level: 85 },
     { name: "Premiere Pro", level: 80 },
-    { name: "Figma", level: 75 },
   ];
 
   return (
